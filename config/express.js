@@ -1,3 +1,8 @@
+/*---------------------------------------------------------------------------
+server.js
+by Filipe Mendes Mariz (301255800)
+2023-09-27
+-----------------------------------------------------------------------------*/
 const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
@@ -29,7 +34,7 @@ module.exports = function () {
 
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
-app.use('/', require('../app/routes/index.server.routes.js'));
+  app.use('/', require('../app/routes/index.server.routes.js'));
 
 //app.use('/', 'routes');
 

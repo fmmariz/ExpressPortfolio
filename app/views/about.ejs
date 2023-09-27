@@ -1,9 +1,42 @@
+<!-- ---------------------------------------------------------------------------
+about.ejs
+by Filipe Mendes Mariz (301255800)
+2023-09-27
+----------------------------------------------------------------------------- -->
 <!DOCTYPE html>
-<html>
-<head>
-<title><%= title %></title>
-</head>
 <body>
-    <h1>About me!</h1>
+    <%- include ('partials/header')%>
+    <%- include ('partials/main_nav')%>
+    <div>
+            <object
+              data='pdf/curriculumvitae.pdf'
+              type="application/pdf"
+              style="
+              margin: auto;
+              display: block;
+              height: 50vw;
+              margin: auto;
+              width: 80vw;  /* Set width to 100% of the viewport width */ 
+          "
+            >
+      
+              <iframe
+                src='pdf/curriculumvitae.pdf'
+                style="
+                    margin: auto;
+                    display: block;
+                    height: 50vw;
+                    margin: auto;
+                    width: 80vw;  /* Set width to 100% of the viewport width */ 
+                "
+               >
+              >
+              <p>This browser does not support PDF!</p>
+              </iframe>
+            </object>
+          </div>
+        <%- include ('partials/bottom_nav')%>
+        <%- include ('partials/footer')%>
 </body>
 </html>
+
