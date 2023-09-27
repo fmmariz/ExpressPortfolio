@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+    <style>
+        /* Add background color to the navbar */
+        .navbar {
+            background-color: #6B8F71;
+        }
+
+        body {
+            background-color: #1D1E18;
+        }
+        /* Space out the navbar items and remove the bullet points */
+        ul.navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between navbar items */
+            justify-content: flex-end; /* Align items to the right */
+            font-size: 20px;
+        }
+
+        ul.navbar-nav li {
+            /* No need for display: inline-block; or float: right; */
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+        a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+        }
+        html, body {
+            color: #D9FFF5;
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        footer {
+            background-color: #6B8F71;
+            color: #D9FFF5;
+            padding: 10px;
+        }
+        footer .navbar-text {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <%- include ('partials/main_nav')%>
+    <main class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to <%= title %> page</h1>
+        </div>
+    </main>
+    <footer>
+        <!-- <nav class="navbar fixed-bottom navbar-dark bg-dark">
+            <h6 class="display-6 navbar-text">&copy;2023 All rights reserved</h6>
+        </nav> -->
+    </footer>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
