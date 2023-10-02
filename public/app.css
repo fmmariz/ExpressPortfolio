@@ -12,10 +12,10 @@ by Filipe Mendes Mariz (301255800)
             --acMid:#0077B3;
             --acLight: #00BFFF;
             /*- HLights -*/
-            --hlDark: #663300;
-            --hlDark1: #663300;
-            --hlMid: #996600;
-            --hlLight: #CC8800;
+            --hlDark: #663300;  
+            --hlDark1: #996600;
+            --hlMid: #CC8800;
+            --hlLight: #FFD700;
             --hlLight1: #FFAA00;
         }
         /* Add background color to the navbar */
@@ -30,6 +30,12 @@ by Filipe Mendes Mariz (301255800)
 
         content{
             text-align: center;
+        }
+
+        .container{
+            border-radius: 10px;
+            background: #333333;
+            margin: 3px;
         }
 
         .jumbotron{
@@ -58,6 +64,14 @@ by Filipe Mendes Mariz (301255800)
             color: var(--hlLight);
         }
 
+        h5{
+            color: var(--hlDark);
+        }
+
+
+        h6{
+            color: var(--hlDark);
+        }
         
         html, body {
             color: var(--acLight);
@@ -74,9 +88,24 @@ by Filipe Mendes Mariz (301255800)
         }
         footer {
             color:var(--bgMid);
-            padding: 10px;
+            padding: 30px;
         }
         footer .navbar-text {
             margin-bottom: 0;
         }
+
+
+
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+
+          }
+          
+          .flex-container .box {
+            width: 50%;
+            margin: 10px;
+            text-align: center;
+            font-size: 30px;
+          }
    
