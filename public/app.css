@@ -1,16 +1,39 @@
-
+     /*
+app.css
+by Filipe Mendes Mariz (301255800)
+2023-09-30*/
+     
+     :root{
+            --bgDark: #1A1A1A;
+            --bgMid: #333333;
+            --bgLight: #555555;
+            /*- Text/Accent -*/
+            --acDark: #00418b;
+            --acMid:#0077B3;
+            --acLight: #00BFFF;
+            /*- HLights -*/
+            --hlDark: #663300;
+            --hlDark1: #663300;
+            --hlMid: #996600;
+            --hlLight: #CC8800;
+            --hlLight1: #FFAA00;
+        }
         /* Add background color to the navbar */
         .navbar {
-            background-color: #6B8F71;
+            background-color: var(--bgMid) !important;
         }
 
         body {
-            background-color: #1D1E18;
+            background-color: var(--bgDark);
             padding-left:0% 2%;
         }
 
         content{
             text-align: center;
+        }
+
+        .jumbotron{
+            background-color: var(--bgLight);
         }
 
 
@@ -23,40 +46,34 @@
             font-size: 20px;
         }
 
-        /* unvisited link */
-        a:link {
-            color: red;
+        h1{
+            color: var(--hlLight1);
         }
+
+        .h2{
+            color: var(--hlLight);
+        }
+
+        .lead{
+            color: var(--hlLight);
+        }
+
         
-        /* visited link */
-        a:visited {
-            color: green;
-        }
-        
-        /* mouse over link */
-        a:hover {
-            color: hotpink;
-        }
-        
-        /* selected link */
-        a:active {
-            color: blue;
-        }
         html, body {
-            color: #D9FFF5;
+            color: var(--acLight);
             height: 100%;
             margin: 0;
         }
         body {
             display: flex;
             flex-direction: column;
+            background-color: var(--bgDark) !important;
         }
         main {
             flex: 1;
         }
         footer {
-            background-color: #6B8F71;
-            color: #D9FFF5;
+            color:var(--bgMid);
             padding: 10px;
         }
         footer .navbar-text {
