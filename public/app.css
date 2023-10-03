@@ -28,18 +28,26 @@ by Filipe Mendes Mariz (301255800)
             padding-left:0% 2%;
         }
 
+        header{
+            width: 100%
+        }
+
         content{
             text-align: center;
         }
 
-        .container{
+        .container-rounded{
+                border-radius: 10px;
+                background: #333333;
+        }
+        
+        img{
             border-radius: 10px;
-            background: #333333;
-            margin: 3px;
         }
 
         .jumbotron{
-            background-color: var(--bgLight);
+            margin: auto;
+            margin-bottom: 10px;
         }
 
 
@@ -47,9 +55,21 @@ by Filipe Mendes Mariz (301255800)
         ul.navbar-nav {
             list-style: none;
             display: flex;
-            gap: 20px; /* Adjust the spacing between navbar items */
+            color: #00BFFF;
+            gap: 30px; /* Adjust the spacing between navbar items */
             justify-content: flex-end; /* Align items to the right */
             font-size: 20px;
+        }
+
+        .nav-pills{
+            margin: auto;
+            margin-bottom: 10px;
+            background-color: var(--bgMid);
+            border-radius: 10px;
+        }
+
+        .active{
+            color: #FFD700;
         }
 
         h1{
@@ -57,6 +77,10 @@ by Filipe Mendes Mariz (301255800)
         }
 
         .h2{
+            color: var(--hlLight);
+        }
+
+        h2{
             color: var(--hlLight);
         }
 
@@ -81,6 +105,7 @@ by Filipe Mendes Mariz (301255800)
         body {
             display: flex;
             flex-direction: column;
+            margin: 0px 0px 0px 0px;
             background-color: var(--bgDark) !important;
         }
         main {
@@ -91,7 +116,10 @@ by Filipe Mendes Mariz (301255800)
             padding: 30px;
         }
         footer .navbar-text {
-            margin-bottom: 0;
+            margin: auto;
+            color: var(--acLight);
+            font-size: 14px;
+            text-align: center;
         }
 
 
@@ -108,4 +136,40 @@ by Filipe Mendes Mariz (301255800)
             text-align: center;
             font-size: 30px;
           }
-   
+
+          #fadingright {
+            mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%);
+          }
+
+          #fadingleft {
+            mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%);
+            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%);
+          }
+
+            /* Style inputs with type="text", select elements and textareas */
+        input[type=text],input[type=email],input[type=tel], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */ 
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+        
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: var(--hlMid);
+            color: var(--bgMid);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+            background-color: var(--hlLight);
+        }

@@ -6,12 +6,15 @@ by Filipe Mendes Mariz (301255800)
 const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
+const multer = require('multer');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const alert = require('alert');
 
 module.exports = function () {
   const app = express();
+  const upload = multer();
 
   if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
@@ -22,6 +25,8 @@ module.exports = function () {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(methodOverride());
+  app.use(upload.array());
+  app.use(express.static('public'));
 
   // Define your session secret here (replace 'your-secret-key-here' with your actual secret key)
   //const sessionSecret = 'your-secret-key-here';
@@ -35,6 +40,8 @@ module.exports = function () {
   app.set('views', './app/views');
   app.set('view engine', 'ejs');
   app.use('/', require('../app/routes/index.server.routes.js'));
+
+
 
 //app.use('/', 'routes');
 

@@ -7,10 +7,48 @@ by Filipe Mendes Mariz (301255800)
 <body>
     <%- include ('partials/header')%>
     <%- include ('partials/main_nav')%>
+    <main class="container container-rounded"
+    style="padding: 10px;">
+        <div class="w3-panel w3-red">
+            <p>Contact Number: +1 (437) 299-6861</p>
+        </div>
+        <div class="w3-panel w3-red">
+            <p>E-mail: fmendesmariz@gmail.com</p>
+        </div> 
+        <div class="container">
+            <h2>Send me a message!</h2>
+            <form action="" method="POST">
+          
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Name">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+              <label for="phone">Contact Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Contact Number">
+
+              <label for="email">E-mail Address</label>
+              <input type="email" id="email" name="email" placeholder="E-mail">
+          
+              <label for="interest">Interest</label>
+              <select id="interest" name="interest">
+                <option value="any">Any</option>
+                <option value="gamedev">Game Development</option>
+                <option value="mobile">Mobile Development</option>
+                <option value="web">Web Development</option>
+              </select>
+          
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Message Content" style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+   </main>
     <footer>
         <%- include ('partials/footer')%>
     </footer>
-    <script src="/jquery/dist/jquery.min.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -8,42 +8,45 @@ by Filipe Mendes Mariz (301255800)
     <%- include ('partials/header')%>
     <%- include ('partials/main_nav')%>
 
-    <main class="container">
+    <main class="container container-rounded">
       <div style="padding: 1% 2% !important;" class="jumbotron">
-        <h1><img src="img/photo.jpg" alt="photo" width="128" height="128"> Filipe M. Mariz</h1>
+        <h1><img src="img/photo.jpg" alt="photo" width="128" height="128"
+          style="edge"> Filipe M. Mariz</h1>
           <blockquote class="blockquote">
               <p class="mb-0">My name is Filipe Mendes Mariz, a computer science bachelor with experience in front end mobile and game development. I have previously worked in projects involving delivery apps, supermalls and bars. Experienced with C++, Swift and Kotlin, creating mobile applications for both iOS and Android. Some experience with backend with MySQL.</p>
             </blockquote>
       </div>
+      <div>
+        <object
+          data='pdf/curriculumvitae.pdf'
+          type="application/pdf"
+          style="
+          margin: auto;
+          display: block;
+          height: 50vw;
+          margin: auto;
+          width: 100%;  /* Set width to 100% of the viewport width */ 
+          padding-bottom: 10px"
+        >
+  
+          <iframe
+            src='pdf/curriculumvitae.pdf'
+            style="
+                margin: auto;
+                display: block;
+                height: 50vw;
+                margin: auto;
+                width: 100%;  /* Set width to 100% of the viewport width */ 
+                padding-bottom: 10px;
+            "
+           >
+          >
+          <p>This browser does not support PDF!</p>
+          </iframe>
+        </object>
+      </div>
   </main>
-    <div>
-            <object
-              data='pdf/curriculumvitae.pdf'
-              type="application/pdf"
-              style="
-              margin: auto;
-              display: block;
-              height: 50vw;
-              margin: auto;
-              width: 80vw;  /* Set width to 100% of the viewport width */ 
-          "
-            >
-      
-              <iframe
-                src='pdf/curriculumvitae.pdf'
-                style="
-                    margin: auto;
-                    display: block;
-                    height: 50vw;
-                    margin: auto;
-                    width: 80vw;  /* Set width to 100% of the viewport width */ 
-                "
-               >
-              >
-              <p>This browser does not support PDF!</p>
-              </iframe>
-            </object>
-          </div>
+
         <%- include ('partials/bottom_nav')%>
         <%- include ('partials/footer')%>
 </body>
