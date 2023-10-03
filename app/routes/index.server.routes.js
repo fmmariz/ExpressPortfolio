@@ -1,3 +1,8 @@
+// ---------------------------------------------------------------------------
+// index.server.routes.js
+// by Filipe Mendes Mariz (301255800)
+// 2023-10-03
+// ----------------------------------------------------------------------------- 
 var express = require('express');
 var app = express();
 var router = express.Router();
@@ -39,6 +44,9 @@ router.get('/projectweb', function(req,res,next){
 router.get('/services', function(req,res,next){
     res.render('services', { title: 'Services', path:"service"});
 });
+
+// The Contact me event;
+// Right now it tried to send alert, but doesnt work :( 
 
 router.post('/contact', function(req,res){
     var info = req.body;
